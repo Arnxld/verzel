@@ -72,7 +72,7 @@ export default function SignUp() {
         />
       </FormField>
 
-      <Button type="submit" disabled={!isFormValid}>Atualizar</Button>
+      <Button type="submit" className="submitButton" disabled={!isFormValid}>Atualizar</Button>
     </Form>
   );
 }

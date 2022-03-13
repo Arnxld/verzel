@@ -45,7 +45,7 @@ export default function Home() {
               <h2>{module.name}</h2>
               <div>
                 <span>
-                  {module.total_classes === 1 ? `${module.total_classes} aula` : `${module.total_classes} aulas`}
+                  {module.total_classes === '1' ? `${module.total_classes} aula` : `${module.total_classes} aulas`}
                 </span>
                 <Link to={`/modules/${module.id}`}>Saiba mais!</Link>
               </div>

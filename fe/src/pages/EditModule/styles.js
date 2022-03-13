@@ -12,17 +12,13 @@ export const Form = styled.form`
   max-width: 600px;
   margin: 100px auto 0;
 
-  button {
+
+  .submitButton {
     margin-top: 24px;
     width: 100%;
-  }
 
-  .not-registered {
-    margin-top: 8px;
-
-    a {
-      text-decoration: none;
-
+    &:hover {
+      background-color: ${({ theme }) => theme.colors.primary.dark_purple};
     }
   }
 `;

@@ -100,7 +100,7 @@ export default function SignUp() {
           onChangeRaw={(e) => e.preventDefault()}
         />
       </FormField>
-      <Button className="updateButton" type="submit" disabled={!isFormValid}>Atualizar</Button>
+      <Button className="submitButton" type="submit" disabled={!isFormValid}>Atualizar</Button>
     </Form>
   );
 }

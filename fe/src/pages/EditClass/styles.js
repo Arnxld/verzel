@@ -26,9 +26,14 @@ export const Form = styled.form`
       outline: none;
     }
 
-    .updateButton {
-      margin-top: 24px;
-      width: 100%;
+  }
+
+  .submitButton {
+    margin-top: 24px;
+    width: 100%;
+
+    &:hover {
+      background-color: ${({ theme }) => theme.colors.primary.dark_purple};
     }
   }
 `;
