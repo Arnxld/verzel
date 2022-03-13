@@ -29,6 +29,7 @@
       "react/jsx-no-constructed-context-values": "off",
       "react/jsx-props-no-spreading": "off",
       "react/button-has-type": "off",
-      "react/jsx-one-expression-per-line": "off"
+      "react/jsx-one-expression-per-line": "off",
+      "linebreak-style": "off"
     }
 }
