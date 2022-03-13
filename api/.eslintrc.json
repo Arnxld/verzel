@@ -15,6 +15,7 @@
       "no-unused-vars": "off",
       "consistent-return": "off",
       "no-extra-boolean-cast": "off",
-      "camelcase": "off"
+      "camelcase": "off",
+      "linebreak-style": "off"
     }
 }
