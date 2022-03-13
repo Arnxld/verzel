@@ -9,7 +9,8 @@ Projeto CRUD de módulos e aulas construído em Node e React.
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) e [PostgreSQL](https://www.postgresql.org/)
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+Além disto é bom ter um editor para trabalhar com o código como o [VSCode](https://code.visualstudio.com/).
+É opcional o uso do [Yarn 1](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable)
 
 ### Primeiro passo
 
@@ -24,11 +25,10 @@ $ git clone https://github.com/Arnxld/verzel.git
 # Acesse a pasta do projeto
 $ cd verzel
 
-# Vá para a pasta api
-$ cd api
+# Abra a pasta api no VSCode
+$ code api
 
-# Copie o conteúdo do arquivo src/database/schema.sql
-$ cd api
+# Acesse o conteúdo do arquivo src/database/schema.sql
 
 # Agora no terminal/cmd, acesse o terminal interativo do PostgreSQL
 $ psql
@@ -38,7 +38,7 @@ $ psql
 # Conecte-se ao banco de dados verzel criado
 $ \c verzel
 
-# Execute os blocos restantes, preferencialmente um após o outro para evitar erros
+# Execute os blocos restantes.
 ```
 
 
@@ -51,10 +51,10 @@ $ code .
 # Crie um arquivo .env, insira as variáveis ambiente com as informações de usuário do PostgreSQL e o segredo para tokens JWT, conforme exemplo no arquivo .env.example
 
 # Instale as dependências
-$ yarn
+$ npm install || yarn
 
 # Execute a aplicação em modo de desenvolvimento no terminal
-$ yarn dev
+$ npm run dev || yarn dev
 
 # O servidor iniciará no endereço http://localhost:3001;
 ```
@@ -62,13 +62,16 @@ $ yarn dev
 ### 🌐Rodando o Front-end
 
 ```bash
-# Abra a pasta ../fe no Visual Studio Code
+# Abra a pasta fe no Visual Studio Code
+code fe
 
 # Instale as dependências
-$ yarn
+$ npm install | yarn
 
 # Execute a aplicação em modo de desenvolvimento no terminal
-$ yarn start
+$ npm run start || yarn start
 
 # A aplicação iniciará no endereço http://localhost:3000
 ```
+
+
