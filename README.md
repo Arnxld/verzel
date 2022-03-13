@@ -56,7 +56,7 @@ $ yarn
 # Execute a aplicação em modo de desenvolvimento no terminal
 $ yarn dev
 
-# O servidor iniciará na porta:3001
+# O servidor iniciará no endereço http://localhost:3001;
 ```
 
 ### 🌐Rodando o Front-end
@@ -69,4 +69,6 @@ $ yarn
 
 # Execute a aplicação em modo de desenvolvimento no terminal
 $ yarn start
+
+# A aplicação iniciará no endereço http://localhost:3000
 ```
