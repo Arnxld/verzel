@@ -23,6 +23,7 @@ export default function SignUp() {
       const { data } = await api.get('/modules');
 
       setModuleOptions(data);
+      setModule(data[0]);
     }
 
     loadModuleSelect();

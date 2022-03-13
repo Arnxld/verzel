@@ -56,8 +56,6 @@ export default function SignUp() {
       removeError('date');
     }
 
-    console.log(date);
-
     setClassDate(date);
   }
 
