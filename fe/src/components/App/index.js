@@ -17,7 +17,7 @@ function App() {
     <BrowserRouter>
       <AuthProvider>
         <ThemeProvider theme={defaultTheme}>
-          <ToastContainer />
+          <ToastContainer position="bottom-right" autoClose={2500} />
           <GlobalStyle />
           <Container>
             <Header />
