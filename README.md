@@ -74,3 +74,7 @@ $ npm run start || yarn start
 # A aplicação iniciará no endereço http://localhost:3000
 ```
 
+### Próximos passos
+- Clean code
+
+- Dark Theme
