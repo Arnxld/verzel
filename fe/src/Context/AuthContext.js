@@ -26,23 +26,28 @@ function AuthProvider({ children }) {
   const history = useHistory();
 
   async function handleLogin({ username, password }) {
-    const { data } = await api.post('/login', { username, password });
+    try {
+      const { data } = await api.post('/login', { username, password });
+      console.log(data);
 
-    const { token, user } = data;
+      const { token, user } = data;
 
-    localStorage.setItem('token', JSON.stringify(token));
+      localStorage.setItem('token', JSON.stringify(token));
 
-    api.defaults.headers.Authorization = `Bearer ${token}`;
+      api.defaults.headers.Authorization = `Bearer ${token}`;
 
-    if (user.is_admin) {
-      setIsAdmin(true);
+      if (user.is_admin) {
+        setIsAdmin(true);
+      }
+
+      setAuthenticated(true);
+
+      history.push('/');
+
+      toast.success('Seja bem vindo!');
+    } catch (err) {
+      toast.error('Falha no login, tente novamente!');
     }
-
-    setAuthenticated(true);
-
-    history.push('/');
-
-    toast.success('Seja bem vindo!');
   }
 
   async function handleLogout() {
