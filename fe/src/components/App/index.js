@@ -8,7 +8,7 @@ import GlobalStyle from '../../assets/styles/global';
 import Header from '../Header';
 import defaultTheme from '../../assets/styles/themes/default';
 import Routes from '../../routes';
-import { AuthContext, AuthProvider } from '../../Context/AuthContext';
+import { AuthProvider } from '../../Context/AuthContext';
 
 const history = createBrowserHistory();
 

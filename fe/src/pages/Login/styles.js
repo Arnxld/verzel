@@ -12,9 +12,18 @@ export const Form = styled.form`
   max-width: 400px;
   margin: 100px auto 0;
 
-  button {
+  .submitButton {
     margin-top: 24px;
     width: 100%;
+
+    &:hover {
+      background-color: ${({ theme }) => theme.colors.primary.dark_purple};
+    }
+
+    &[disabled] {
+      background: #ccc;
+      cursor: default;
+    }
   }
 
   .not-registered {

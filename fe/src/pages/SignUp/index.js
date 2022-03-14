@@ -88,7 +88,7 @@ export default function SignUp() {
         />
       </FormField>
 
-      <Button type="submit" disabled={!isFormValid}>Cadastrar</Button>
+      <Button type="submit" className="submitButton" disabled={!isFormValid}>Cadastrar</Button>
 
       <div className="not-registered">
         <span>Já possui uma conta? </span>

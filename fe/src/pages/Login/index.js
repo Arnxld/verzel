@@ -73,7 +73,7 @@ export default function Login() {
         />
       </FormField>
 
-      <Button type="submit" disabled={!isFormValid}>Entrar</Button>
+      <Button type="submit" className="submitButton" disabled={!isFormValid}>Entrar</Button>
 
       <div className="not-registered">
         <span>Não possui conta? </span>
