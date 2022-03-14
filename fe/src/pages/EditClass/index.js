@@ -2,7 +2,8 @@ import 'react-datepicker/dist/react-datepicker.css';
 import {
   useState, useContext, useEffect, forwardRef,
 } from 'react';
-import { Link, useHistory, useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import DatePicker from 'react-datepicker';
 import { formatISO } from 'date-fns';
 
@@ -70,6 +71,8 @@ export default function SignUp() {
     api.put(`/classes/${id}`, data);
 
     history.push('/');
+
+    toast.success('Aula atualizada com sucesso!');
   }
 
   const isFormValid = (name && errors.length === 0);

@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import api from '../api';
 
 const AuthContext = createContext();
@@ -40,6 +41,8 @@ function AuthProvider({ children }) {
     setAuthenticated(true);
 
     history.push('/');
+
+    toast.success('Seja bem vindo!');
   }
 
   async function handleLogout() {

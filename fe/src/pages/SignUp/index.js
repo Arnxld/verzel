@@ -1,5 +1,6 @@
 import { useState, useContext } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { Form, ContentHeader } from './styles';
 import api from '../../api';
 
@@ -59,7 +60,7 @@ export default function SignUp() {
 
     history.push('/login');
 
-    // handleLogin({ username, password });
+    toast.success('Conta criada, faça seu login!');
   }
 
   const isFormValid = (username && password && errors.length === 0);

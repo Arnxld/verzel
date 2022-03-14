@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { Form, ContentHeader } from './styles';
 import api from '../../api';
 
@@ -38,6 +39,8 @@ export default function SignUp() {
     api.post('/modules', data);
 
     history.push('/');
+
+    toast.success('Módulo criado!');
   }
 
   const isFormValid = (name && errors.length === 0);

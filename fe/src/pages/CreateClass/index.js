@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import DatePicker from 'react-datepicker';
 import { formatISO } from 'date-fns';
 import { Form, ContentHeader } from './styles';
@@ -25,6 +26,13 @@ export default function SignUp() {
       setModuleOptions(data);
       setModule(data[0]);
     }
+    function roundToNearest30(date = new Date()) {
+      const minutes = 30;
+      const ms = 1000 * 60 * minutes;
+      return new Date(Math.ceil(date.getTime() / ms) * ms);
+    }
+
+    setClassDate(roundToNearest30(new Date()));
 
     loadModuleSelect();
   }, []);
@@ -61,12 +69,14 @@ export default function SignUp() {
     const data = {
       name,
       class_date: formatISO(classDate),
-      module,
+      module: module.name,
     };
 
     api.post('/classes', data);
 
     history.push('/');
+
+    toast.success('Aula criada com sucesso!');
   }
 
   const isFormValid = (name && classDate && module && errors.length === 0);
