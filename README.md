@@ -56,7 +56,7 @@ $ npm install || yarn
 # Execute a aplicação em modo de desenvolvimento no terminal
 $ npm run dev || yarn dev
 
-# O servidor iniciará no endereço http://localhost:3001;
+# O servidor iniciará no endereço http://localhost:3001
 ```
 
 ### 🌐Rodando o Front-end
@@ -66,12 +66,11 @@ $ npm run dev || yarn dev
 code fe
 
 # Instale as dependências
-$ npm install | yarn
+$ npm install || yarn
 
 # Execute a aplicação em modo de desenvolvimento no terminal
 $ npm run start || yarn start
 
 # A aplicação iniciará no endereço http://localhost:3000
 ```
-
 
